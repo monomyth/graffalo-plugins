@@ -1,0 +1,73 @@
+{
+  "name": "graffalo",
+  "version": "0.1.0",
+  "variant": "portable",
+  "endpoint": "https://graffalo.io/mcp",
+  "files": [
+    {
+      "path": "assets/icon.png",
+      "bytes": 8255,
+      "sha256": "d482ad9d3c444ca4b24a595d7b010d1487015d85226d921f4d5049937d866ace"
+    },
+    {
+      "path": "assets/logo.png",
+      "bytes": 44238,
+      "sha256": "775d925e6aa6ed32e7b9203975173bf87fa6f1f012b7ea373e683c8b59917f16"
+    },
+    {
+      "path": "BRANDING.md",
+      "bytes": 469,
+      "sha256": "4248dbdc28209d7192bef144fa9d8410060bb9896ea260962d80e7e125b94845"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1374,
+      "sha256": "83d1c76eb09825f4317bbc0a99e9cb146182e5a84882e995e75fb4cd943dc36a"
+    },
+    {
+      "path": "mcp.json",
+      "bytes": 194,
+      "sha256": "13ba179315196cc35dc4c33b62c57e69bf82f1cd0ca71ab751efdc8c48de4f38"
+    },
+    {
+      "path": "plugin.json",
+      "bytes": 5332,
+      "sha256": "59be139a69bc770e55980c4414fd0ae11e63f34ce71a7949de3909e033705401"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5076,
+      "sha256": "ea52d6aae5878e0fe05add0a76d73f9d2a8504956ab1a7afb16a0330414bea93"
+    },
+    {
+      "path": "skills/graffalo-database-schema/SKILL.md",
+      "bytes": 2433,
+      "sha256": "11321ce21724ba5bd8f91e552aa56c2b44988d1c4eafebc31ce724c7a7d115d2"
+    },
+    {
+      "path": "skills/graffalo-diagram-from-source/SKILL.md",
+      "bytes": 5681,
+      "sha256": "0aadcc1c9e01baa43ffb822c5984feff1ee9520eaf95b28c4eb5308974165ad6"
+    },
+    {
+      "path": "skills/graffalo-repo-architecture/SKILL.md",
+      "bytes": 2322,
+      "sha256": "ff442c5606b7ac41c13fa445559c47178630aa5b3a6ce55b99e4015628af684b"
+    },
+    {
+      "path": "skills/graffalo-review/SKILL.md",
+      "bytes": 4011,
+      "sha256": "528a50dcb501ed71861d618b8c983619ea41810dc518e3387896a7b43cad8ca4"
+    },
+    {
+      "path": "skills/graffalo-sequence-diagram/SKILL.md",
+      "bytes": 2374,
+      "sha256": "ea35e877ca9bb457b2cf11bd6080d180a95dce7336055c0b421f17543db038a7"
+    },
+    {
+      "path": "skills/graffalo-setup/SKILL.md",
+      "bytes": 2516,
+      "sha256": "973f1109f3eac377ef5f7c8ca1c7528f65856610755571470adcabad594dccd7"
+    }
+  ]
+}
