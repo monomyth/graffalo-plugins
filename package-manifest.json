@@ -1,6 +1,6 @@
 {
   "name": "graffalo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "variant": "portable",
   "endpoint": "https://graffalo.io/mcp",
   "files": [
@@ -32,12 +32,12 @@
     {
       "path": "plugin.json",
       "bytes": 5332,
-      "sha256": "59be139a69bc770e55980c4414fd0ae11e63f34ce71a7949de3909e033705401"
+      "sha256": "d6878db246732673a36bc30217b80efa320c2b04c673bc561fea1cb9b2bd10fb"
     },
     {
       "path": "README.md",
-      "bytes": 5076,
-      "sha256": "ea52d6aae5878e0fe05add0a76d73f9d2a8504956ab1a7afb16a0330414bea93"
+      "bytes": 6002,
+      "sha256": "d906c4cf28262bd82ea9436dc419b9ace87fdbe4499a06ea785ea74192e98a82"
     },
     {
       "path": "skills/graffalo-database-schema/SKILL.md",

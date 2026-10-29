@@ -13,14 +13,21 @@ in this package. Never paste a credential into a conversation.
 
 | Package | Installation path | Current status |
 | --- | --- | --- |
-| Portable Agent Plugins | Root `plugin.json` and `mcp.json`; suitable for Cursor's Agent Plugins loader and supporting Codex versions | Package checked; native acceptance pending |
-| OpenAI | Use the OpenAI build ZIP, with explicit CIMD configuration in `mcp.json`; choose **With MCP** in the plugin submission flow | Prepared for local/reviewer testing; no public directory listing claimed |
+| Codex desktop / CLI | Use `codex.zip`, with `.codex-plugin/plugin.json`, explicit component paths and `.mcp.json` | Codex 0.163.0 discovers the MCP server and all six skills; authenticated acceptance pending |
+| Portable Agent Plugins | Root `plugin.json` and `mcp.json`; suitable for Cursor's Agent Plugins loader | Package checked; native acceptance pending |
+| OpenAI submission / ChatGPT | Use `openai.zip`, with explicit CIMD configuration in `mcp.json`; choose **With MCP** in the plugin submission flow | Prepared for reviewer testing; no public directory listing claimed |
 | Grok Build | Use the Grok Build directory with `.claude-plugin/plugin.json`, `.mcp.json` and shared `skills/`; load through `--plugin-dir <directory>` or `.grok/plugins/` | Adapter checked; native acceptance pending |
 | Grok Bot | In Connect apps, add a custom Streamable HTTP server using the endpoint above and browser authorization; use the shared skill instructions if supported | Custom MCP availability depends on your account; not a Grok Bot catalog listing |
 
 The OpenAI build adds the documented `extensions.com.openai.auth` server field.
 The portable build stays within the published Agent Plugins 1.0 MCP schema,
 which currently rejects that field. Do not treat the two formats as identical.
+Codex 0.163.0 loads the portable package's skills but does not discover its MCP
+server. Use the separate Codex adapter: its compatibility manifest explicitly
+declares `./.mcp.json` with the `http` transport. It still connects to the same
+Streamable HTTP endpoint with native OAuth discovery; it contains no token,
+header or custom login script. A portable manifest must not be added alongside
+the adapter, because it takes precedence over the compatibility manifest.
 Grok Build's Claude-compatible adapter uses transport `http`, not the portable
 schema's `streamable-http` spelling. The portable repository root is not a
 Grok Build package: use the separately released Grok Build ZIP for sideloading.
@@ -66,6 +73,10 @@ that permission. Private document URLs do not give recipients access.
 
 ## Troubleshooting and disconnect
 
+- Skills available but no Graffalo tools: check that you installed `codex.zip`
+  for Codex, then use the native MCP connection action. Signing into Graffalo's
+  website alone does not authorize the agent. Repeated sign-outs do not repair
+  a missing server declaration.
 - A 401 means sign in/reconnect through the client; a scope challenge requires
   reviewing the additional requested access. Do not silently broaden consent.
 - `upgrade_required` means the requested feature needs a trial/membership.
