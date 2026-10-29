@@ -13,10 +13,10 @@ in this package. Never paste a credential into a conversation.
 
 | Package | Installation path | Current status |
 | --- | --- | --- |
-| Codex desktop / CLI | Use `codex.zip`, with `.codex-plugin/plugin.json`, explicit component paths and `.mcp.json` | Codex 0.163.0 discovers the MCP server and all six skills; authenticated acceptance pending |
+| Codex desktop / CLI | Use `codex.zip`, with `.codex-plugin/plugin.json`, explicit component paths and `.mcp.json` | Codex 0.163.0: OAuth, account, create/read/edit and PNG delivery passed; owner confirmed PDF. Native permission/refresh/revocation checks remain |
 | Portable Agent Plugins | Root `plugin.json` and `mcp.json`; suitable for Cursor's Agent Plugins loader | Package checked; native acceptance pending |
-| OpenAI submission / ChatGPT | Use `openai.zip`, with explicit CIMD configuration in `mcp.json`; choose **With MCP** in the plugin submission flow | Prepared for reviewer testing; no public directory listing claimed |
-| Grok Build | Use the Grok Build directory with `.claude-plugin/plugin.json`, `.mcp.json` and shared `skills/`; load through `--plugin-dir <directory>` or `.grok/plugins/` | Adapter checked; native acceptance pending |
+| OpenAI submission / ChatGPT | Use `openai.zip`, with explicit CIMD configuration in `mcp.json`; choose **With MCP** in the plugin submission flow | All six workflows passed owner testing in ChatGPT web through a private skills wrapper; public submission and final authorization checks remain |
+| Grok Build | Extract `grok-build.zip`, validate with `grok plugin validate <directory>`, then install that directory with `grok plugin install <directory> --trust` after reviewing it | Grok 1.0.73 discovers six skills and one MCP server; OAuth and workflow acceptance pending |
 | Grok Bot | In Connect apps, add a custom Streamable HTTP server using the endpoint above and browser authorization; use the shared skill instructions if supported | Custom MCP availability depends on your account; not a Grok Bot catalog listing |
 
 The OpenAI build adds the documented `extensions.com.openai.auth` server field.
@@ -33,8 +33,14 @@ schema's `streamable-http` spelling. The portable repository root is not a
 Grok Build package: use the separately released Grok Build ZIP for sideloading.
 No Grok marketplace entry is published by this package; a future entry must
 reference an independently tested adapter path/ref, not the portable root.
-Installing a file is not evidence that
-OAuth or image delivery works in a particular client version.
+Grok 1.0.73 does not accept `--plugin-dir` as a top-level TUI flag. Its ACP
+agent mode has a separate flag; use the plugin install command for normal use.
+Discovery does not enable an untrusted project plugin or authorize its MCP server.
+The workflow evidence above uses app 0.47.1 and was recorded on 29 October
+2026. The public submission package and the private existing-connection wrapper
+are different artifacts. Only the remote-MCP package is suitable for directory
+submission. Installing a file is not evidence that OAuth or image delivery works
+in a particular client version.
 
 For a direct MCP connection without a package, add the endpoint to your client's
 custom server settings and use its OAuth connect action. In Codex CLI the
