@@ -1,0 +1,20 @@
+{
+  "name": "graffalo",
+  "version": "0.1.2",
+  "description": "Create, inspect and refine connected diagrams in your Graffalo account.",
+  "author": {
+    "name": "Mriya Research LLC",
+    "email": "support@graffalo.io",
+    "url": "https://graffalo.io"
+  },
+  "homepage": "https://graffalo.io",
+  "license": "MIT",
+  "keywords": [
+    "diagrams",
+    "graphs",
+    "architecture",
+    "database",
+    "sequence",
+    "mcp"
+  ]
+}

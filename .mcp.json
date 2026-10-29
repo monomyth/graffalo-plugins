@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "graffalo": {
+      "type": "http",
+      "url": "https://graffalo.io/mcp"
+    }
+  }
+}
