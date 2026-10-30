@@ -24,10 +24,7 @@ Additional scopes require the user's consent; do not broaden access automaticall
 An HTML Vercel login page means a protected/wrong deployment, not a Graffalo OAuth
 response. The public plugin has no bypass header.
 
-Free accounts can list permitted metadata and inspect branded `render` previews.
-Full graph reads, creation, edits, layout and agent exports need a trial or paid
-membership **and** the relevant granted scopes. A paid account with a read-only
-grant cannot edit. A document-restricted grant cannot create new documents.
+Free accounts can create and edit five custom diagrams plus built-in demos in the browser and through MCP/plugins. Demos do not count; deleting a custom diagram frees a slot. Existing work remains readable and editable after downgrade, even above five; new creation waits until below the limit. PNG, SVG and PDF support unlimited branded output. Set `branded:false` for a clean file: Free has one clean export per rolling 24 hours, shared across formats, browser and MCP. Exact-file retries and chunk retrieval do not spend twice. Mermaid source exports use the clean allowance. Imports and built-in chat still require trial/Pro. Matching OAuth scopes and document permissions always apply; existing preview-only grants must reconnect to authorize graph reads and edits. A read-only grant cannot edit. A document-restricted grant cannot create new documents.
 The user can manage their plan in Graffalo's browser UI; do not collect payment
 details, create checkout sessions or promise an automatic upgrade.
 

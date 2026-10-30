@@ -1,6 +1,6 @@
 {
   "name": "graffalo",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "variant": "portable",
   "endpoint": "https://graffalo.io/mcp",
   "files": [
@@ -31,13 +31,13 @@
     },
     {
       "path": "plugin.json",
-      "bytes": 5937,
-      "sha256": "34dce77513215b057d36b4486307db342901d28741de24f15ce9d4a7ae128203"
+      "bytes": 6043,
+      "sha256": "5a074e9a78ec63c961bae8b576bde0857f27da479fb1a329fea72afb86c28716"
     },
     {
       "path": "README.md",
-      "bytes": 8930,
-      "sha256": "9f8caac6c87acd6c13b6e185db2abaabcdc5bb5fa7e00f0d889fd2c69dcc2f88"
+      "bytes": 9494,
+      "sha256": "600c9b42956dde56ca5e3b1434e699a2cddde5d1a477a50fd115225454603413"
     },
     {
       "path": "skills/graffalo-database-schema/SKILL.md",
@@ -46,8 +46,8 @@
     },
     {
       "path": "skills/graffalo-diagram-from-source/SKILL.md",
-      "bytes": 7284,
-      "sha256": "4a7a88cfa4e8dc3108b4678d216ab8ebd5091f53c757fdee3e19c2ea80f7a60d"
+      "bytes": 7378,
+      "sha256": "c133906544e51d6b894eb665ff9255e1a832de5c2f35b254112bfdb84b8f3aed"
     },
     {
       "path": "skills/graffalo-repo-architecture/SKILL.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "skills/graffalo-review/SKILL.md",
-      "bytes": 5614,
-      "sha256": "38573679ade646c0d5887bce319c0fee75b8b384addcf60465b5604759aa7623"
+      "bytes": 5610,
+      "sha256": "6b3e0ba0e00d96de71c8445e85ac469d19875f3a443bcfa45600f7af2a72609a"
     },
     {
       "path": "skills/graffalo-sequence-diagram/SKILL.md",
@@ -66,8 +66,8 @@
     },
     {
       "path": "skills/graffalo-setup/SKILL.md",
-      "bytes": 2516,
-      "sha256": "973f1109f3eac377ef5f7c8ca1c7528f65856610755571470adcabad594dccd7"
+      "bytes": 3057,
+      "sha256": "084641eb39842218509e1b3b69e9440c28d6937ac713b6c72a374bda33b65c5b"
     }
   ]
 }
