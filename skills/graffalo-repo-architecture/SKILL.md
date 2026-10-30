@@ -53,3 +53,5 @@ bytes in offset order, following `next_offset` until `eof`. Verify the final
 download. Never make a public share or broaden OAuth permissions as a workaround.
 If the client cannot save tool text either, return the private browser download
 link and state that an authenticated browser is required.
+
+Do not transcribe or repair base64 with model-generated text. Save raw tool output programmatically. In Grok Build headless mode the adapter README documents `scripts/save-grok-exports.py`, an explicitly invoked verified stream saver. If raw bytes cannot be saved, return the private browser download link and state that client-side file saving is unavailable. Never claim a mismatched hash passed.

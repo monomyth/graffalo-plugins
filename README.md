@@ -14,9 +14,9 @@ in this package. Never paste a credential into a conversation.
 | Package | Installation path | Current status |
 | --- | --- | --- |
 | Codex desktop / CLI | Use `codex.zip`, with `.codex-plugin/plugin.json`, explicit component paths and `.mcp.json` | Codex 0.163.0: OAuth, account, create/read/edit and PNG delivery passed; owner confirmed PDF. Native permission/refresh/revocation checks remain |
-| Portable Agent Plugins | Root `plugin.json` and `mcp.json`; suitable for Cursor's Agent Plugins loader | Package checked; native acceptance pending |
+| Portable Agent Plugins | Root `plugin.json` and `mcp.json`; suitable for Cursor's Agent Plugins loader | Native loading, OAuth, creation/edit/preview and scoped denial/revocation passed; remaining cases tracked in the client guide |
 | OpenAI submission / ChatGPT | Use `openai.zip`, with explicit CIMD configuration in `mcp.json`; choose **With MCP** in the plugin submission flow | All six workflows passed owner testing in ChatGPT web through a private skills wrapper; public submission and final authorization checks remain |
-| Grok Build | Extract `grok-build.zip`, validate with `grok plugin validate <directory>`, then install that directory with `grok plugin install <directory> --trust` after reviewing it | Grok 1.0.73 discovers six skills and one MCP server; OAuth and workflow acceptance pending |
+| Grok Build | Extract `grok-build.zip`, validate with `grok plugin validate <directory>`, then install that directory with `grok plugin install <directory> --trust` after reviewing it | Grok 1.0.73: six skills, production OAuth, create/edit/preview, natural refresh and scoped denial passed; original files use the verified stream helper below |
 | Grok Bot | In Connect apps, add a custom Streamable HTTP server using the endpoint above and browser authorization; use the shared skill instructions if supported | Custom MCP availability depends on your account; not a Grok Bot catalog listing |
 
 The OpenAI build adds the documented `extensions.com.openai.auth` server field.
@@ -36,8 +36,8 @@ reference an independently tested adapter path/ref, not the portable root.
 Grok 1.0.73 does not accept `--plugin-dir` as a top-level TUI flag. Its ACP
 agent mode has a separate flag; use the plugin install command for normal use.
 Discovery does not enable an untrusted project plugin or authorize its MCP server.
-The workflow evidence above uses app 0.47.1 and was recorded on 29 October
-2026. The public submission package and the private existing-connection wrapper
+The latest Grok evidence uses app 0.49.0 and was recorded on 30 October
+2026; earlier Codex/ChatGPT evidence is versioned separately in the client guide. The public submission package and the private existing-connection wrapper
 are different artifacts. Only the remote-MCP package is suitable for directory
 submission. Installing a file is not evidence that OAuth or image delivery works
 in a particular client version.
@@ -107,3 +107,33 @@ Original PNG/PDF retrieval on clients without MCP resource support uses the
 from the client's preview and check its SHA-256 before delivery. Geometry checks
 include explicit routing repairs without moving unrelated nodes. Marketplace
 listing and native client acceptance remain separate from installing this package.
+
+## Original files in Grok Build
+
+Do not ask a language model to copy or repair base64. In Grok Build's headless
+mode, the adapter includes an optional Python 3 standard-library helper that
+saves the actual `read_export` tool bytes from its `streaming-json` output:
+
+```sh
+# Review/authorize your model, account and spending limit before the model run.
+# Configure your usual native OAuth connection; no token belongs in this command.
+set -o pipefail
+grok --model YOUR_APPROVED_MODEL --output-format streaming-json \
+  --prompt-file export-request.txt |
+  python3 /path/to/graffalo/scripts/save-grok-exports.py \
+    --document-id YOUR_DOCUMENT_ID --output ./graffalo-exports
+```
+
+The request should name the document and saved revision, ask for `export_png`
+and `export_pdf`, then `read_export` for each exact receipt URI until `eof`.
+It should explicitly say not to copy base64 into terminal/file-edit tools.
+Keep your client's normal permission policy; this helper grants no access and
+runs no model or network request. It reads only the selected document's completed
+tool results, checks chunk offsets, file sizes, PNG dimensions and SHA-256, then
+creates private files without overwriting existing paths. Model text and reasoning
+are ignored and not saved. Missing, corrupt, unrelated or incomplete bytes fail.
+The helper is an explicitly invoked command, not an automatic plugin hook.
+
+For interactive clients that cannot save raw tool bytes, return the receipt's
+private browser download link instead. It requires the user's Graffalo sign-in;
+do not describe it as a file already downloaded or create a public sharing link.
