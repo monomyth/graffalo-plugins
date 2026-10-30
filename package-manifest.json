@@ -1,13 +1,13 @@
 {
   "name": "graffalo",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "variant": "grok-build",
   "endpoint": "https://graffalo.io/mcp",
   "files": [
     {
       "path": ".claude-plugin/plugin.json",
       "bytes": 431,
-      "sha256": "79593fd052af6d91cb9201da79c2093a727d83d71b007a2264e26eec963f6454"
+      "sha256": "780acddcf96038636d7f4f433695599a1fc203262bc3450ede08ae53842779c5"
     },
     {
       "path": ".mcp.json",
@@ -36,33 +36,38 @@
     },
     {
       "path": "README.md",
-      "bytes": 7076,
-      "sha256": "f10dab652bad2bf2dc73d13b5a5ecc9d69f874dcb0277f23257fff0f65360767"
+      "bytes": 8930,
+      "sha256": "9f8caac6c87acd6c13b6e185db2abaabcdc5bb5fa7e00f0d889fd2c69dcc2f88"
+    },
+    {
+      "path": "scripts/save-grok-exports.py",
+      "bytes": 5655,
+      "sha256": "fa1934e11986c3e65d88f5b1eb9cdd7febb5b539c8ceca3eaabc6f6458a71871"
     },
     {
       "path": "skills/graffalo-database-schema/SKILL.md",
-      "bytes": 3636,
-      "sha256": "46cb157513942062e5a0eefe44d027b92c78c05e60a0e503cb9432fcb46ad62f"
+      "bytes": 4036,
+      "sha256": "0a38f6748346efa7377202a40deef25090cfad8df7534ed5bdb3e81d4665cc1b"
     },
     {
       "path": "skills/graffalo-diagram-from-source/SKILL.md",
-      "bytes": 6884,
-      "sha256": "2a4c94fb8bd0bba473dc623883e06824400374b02ddcd2ce50ade38e563032bc"
+      "bytes": 7284,
+      "sha256": "4a7a88cfa4e8dc3108b4678d216ab8ebd5091f53c757fdee3e19c2ea80f7a60d"
     },
     {
       "path": "skills/graffalo-repo-architecture/SKILL.md",
-      "bytes": 3525,
-      "sha256": "1cf259d5965b1475f26682112fe3d366fe76847d705be11af8aacd9ca596ec29"
+      "bytes": 3925,
+      "sha256": "c13af4e45d36c0ce0942a9f0157706e9811b1ba293699214166770cfa5802ced"
     },
     {
       "path": "skills/graffalo-review/SKILL.md",
-      "bytes": 5214,
-      "sha256": "da41e775c5a252ea9e933a49b74792af1523ab9a0a4b3ce6a67e7e45b5f60844"
+      "bytes": 5614,
+      "sha256": "38573679ade646c0d5887bce319c0fee75b8b384addcf60465b5604759aa7623"
     },
     {
       "path": "skills/graffalo-sequence-diagram/SKILL.md",
-      "bytes": 2991,
-      "sha256": "a6a721cad1ab1f0920bbb949d1465361db5b442bdabfeda2ebbf1ba7546401dc"
+      "bytes": 3391,
+      "sha256": "94d66d03dccd93261607fe2917b63c9e203a4b14a4b5bb4dc4a27a464153d302"
     },
     {
       "path": "skills/graffalo-setup/SKILL.md",
