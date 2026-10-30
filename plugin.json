@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "graffalo",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Create, inspect and refine connected diagrams in your Graffalo account.",
   "author": {
     "name": "Mriya Research LLC",
@@ -24,7 +24,7 @@
       "interface": {
         "displayName": "Graffalo",
         "shortDescription": "Create connected diagrams",
-        "longDescription": "Create source-backed architecture, database and sequence diagrams; inspect rendered results and refine graphs with revision-safe edits. Free includes five custom diagrams plus demos, browser/MCP editing, unlimited branded PNG/SVG/PDF exports and one clean export per 24 hours. Imports and built-in chat require trial/Pro. Permissions always apply.",
+        "longDescription": "Create source-backed architecture, database and sequence diagrams; inspect rendered results and refine graphs with revision-safe edits. Free includes five custom diagrams (including edited demos), extra unchanged demos, browser/MCP editing, unlimited branded PNG/SVG/PDF exports and one clean export per 24 hours. Imports and built-in chat require trial/Pro. Permissions always apply.",
         "developerName": "Mriya Research LLC",
         "category": "Productivity",
         "capabilities": [
@@ -46,7 +46,7 @@
         ]
       },
       "publication": {
-        "release_notes": "Document five Free diagrams plus demos, browser and MCP authoring, unlimited branded exports and one clean export per 24 hours. Existing preview-only connections require renewed consent for editing. Marketplace acceptance remains separate."
+        "release_notes": "Clarify that first saved demo edits use one of the five Free custom-diagram slots, with fresh originals retained. Further edits remain unlimited; existing work survives downgrade. Align Codex listing with current Free authoring and export policy. Marketplace acceptance remains separate."
       },
       "review": {
         "test_cases": {
