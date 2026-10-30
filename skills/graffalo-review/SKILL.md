@@ -8,7 +8,7 @@ description: Inspect and improve an existing Graffalo diagram while preserving i
 Use the intended document and configured server; verify its identity through
 `get_schema` and bounded `search_documents` metadata (`list_documents` on older
 servers). With graph access, read `get_document` and its
-revision. With Free preview-only access, inspect permitted metadata and `render`
+revision. With a preview-only grant, inspect permitted metadata and `render`
 and provide a visual critique without pretending to inspect hidden graph data.
 Unavailable access is not a reason to recreate the document.
 

@@ -67,9 +67,7 @@ Then try one of these requests:
 - “Draw a sequence diagram of this HTTP request, including the stated timings.”
 - “Review this diagram for overlapping labels; explain fixes before editing.”
 
-Free accounts can inspect permitted metadata and branded previews. A trial or
-membership is required for full graph reads, creation, editing and agent exports.
-The connection also needs the matching scopes. Change plans only in Graffalo's
+Free accounts can create and edit five custom diagrams plus built-in demos in the browser and through MCP/plugins. Demos do not count; deleting a custom diagram frees a slot. Existing work remains readable and editable after downgrade, even above five; new creation waits until below the limit. PNG, SVG and PDF support unlimited branded output. Set `branded:false` for a clean file: Free has one clean export per rolling 24 hours, shared across formats, browser and MCP. Exact-file retries and chunk retrieval do not spend twice. Mermaid source exports use the clean allowance. Imports and built-in chat still require trial/Pro. Matching OAuth scopes and document permissions always apply; existing preview-only grants must reconnect to authorize graph reads and edits. Change plans only in Graffalo's
 browser UI; this integration does not accept payment details.
 
 Skills preserve stable IDs, compare revisions, inspect saved renders and keep

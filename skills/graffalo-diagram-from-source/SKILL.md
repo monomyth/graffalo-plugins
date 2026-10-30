@@ -68,7 +68,7 @@ identical uncertain retry within the 24-hour receipt period. A replay can return
 older revision: reread before the next edit. On a 409 reread and reapply the user's
 intent; never overwrite blindly. On auth/scope/plan failure, report the required
 access; do not silently reconnect with broader permissions or create another copy.
-Free metadata/preview access supports inspection, not graph creation or editing.
+Free permits five custom diagrams plus demos and scoped graph creation/editing. Text/file imports remain trial/Pro; do not reclassify an import to evade the plan restriction.
 
 After saving, call `render` for each changed canvas and inspect the actual PNG.
 Check arrows, labels, group containment, clipping, overlaps and evidence markers.
