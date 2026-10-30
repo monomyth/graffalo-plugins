@@ -101,3 +101,9 @@ Support: [support@graffalo.io](mailto:support@graffalo.io) ·
 Package text is MIT-licensed. Branding is separately permitted by BRANDING.md.
 Native client testing and marketplace reviews are tracked separately from
 package validation; no catalog acceptance is implied by this repository.
+
+Original PNG/PDF retrieval on clients without MCP resource support uses the
+`read_export` tool (Graffalo server 0.49.0+). Skills distinguish an original file
+from the client's preview and check its SHA-256 before delivery. Geometry checks
+include explicit routing repairs without moving unrelated nodes. Marketplace
+listing and native client acceptance remain separate from installing this package.

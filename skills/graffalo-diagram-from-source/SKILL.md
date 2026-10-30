@@ -85,3 +85,21 @@ blanket permission to expose the document.
 Prefer the returned `document_url` (or `document_path` with the configured origin)
 over reconstructing a browser link. Use advertised resource URIs as opaque resource
 identities. A dry-run link identifies stored state, not the unsaved proposal.
+
+Run `quality_check` on the saved revision before delivery, including raw JSON
+creations. A correct edge list can still draw a misleading path through an
+unrelated node. For an unintended `edge_through_node`, dry-run and apply
+`route_edges` on that page; if unintended `edge_overlap` remains, use `fan_edges`.
+These operations preserve node positions, ports and group membership. Reread the
+saved revision, check quality and render again. Do not substitute blanket layout
+or change logical endpoints to make a warning disappear; intentional crossings
+may remain when clearly explained.
+
+For requested PNG/PDF files, use `export_png`/`export_pdf`. If the client cannot
+save the original attachment or read MCP resources, use `read_export` with the
+returned `resource_uri`. Decode each `data_base64` chunk separately and append
+bytes in offset order, following `next_offset` until `eof`. Verify the final
+`bytes` and `sha256` before attaching the file; a thumbnail or receipt is not a
+download. Never make a public share or broaden OAuth permissions as a workaround.
+If the client cannot save tool text either, return the private browser download
+link and state that an authenticated browser is required.
